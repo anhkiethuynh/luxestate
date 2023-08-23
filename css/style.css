@@ -2,6 +2,7 @@
   --primary-color: #ffcc01;
   --gray-color: #f6f5f4;
   --dark-blue-color: #1f373d;
+  --light-gray-color: #919eb1;
 
   --fs-body: 1.3rem;
   --fs-heading: 4rem;
@@ -68,7 +69,11 @@ img {
   margin-bottom: 35px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 0px 32px -2px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0px 0px 32px -2px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 32px -2px rgba(0, 0, 0, 0.22);
 }
+
 .card-item .card-img {
   aspect-ratio: 350 / 380;
   display: block;
@@ -79,6 +84,11 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.4s;
+}
+
+.card-list .card-item:hover .card-img img {
+  transform: scale(1.04);
 }
 .card-item .card-text {
   padding: 18px 23px;
@@ -177,14 +187,14 @@ header .cta-group .cta-link {
 }
 
 .sc-hero .form-group {
-  padding-top: 150px;
+  padding-top: 140px;
 }
 
 .sc-hero .form-group h1 {
   font-size: 6.2rem;
   line-height: 7.8rem;
   font-family: fb;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 .sc-hero .form-group form {
   display: flex;
@@ -209,7 +219,7 @@ header .cta-group .cta-link {
   border: none;
   font-family: fre;
   font-size: 1.5rem;
-  color: #919eb1;
+  color: var(--light-gray-color);
   margin-left: 15px;
   width: 100%;
 }
@@ -278,7 +288,7 @@ header .cta-group .cta-link {
   font-size: 4rem;
   line-height: 5rem;
   color: var(--primary-color);
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   font-family: fsmb;
 }
 .sc-statistics .numbers .numbers-item .text {
@@ -304,10 +314,15 @@ header .cta-group .cta-link {
   padding: 0 50px;
   margin: 0 auto;
   margin-top: 15px;
+  transition: all 0.4s;
+}
+.sc-appartments .sc-appartments-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--dark-blue-color);
 }
 
 .sc-works {
-  padding: 75px 0 45px;
+  padding: 70px 0 45px;
 }
 .sc-works .textbox .content {
   max-width: 355px;
@@ -323,7 +338,7 @@ header .cta-group .cta-link {
 }
 
 .sc-works .work-card {
-  padding: 45px 68px 50px 45px;
+  padding: 30px 68px 50px 45px;
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25);
@@ -342,11 +357,11 @@ header .cta-group .cta-link {
 .sc-works .work-card .wc-number:not(.--small) {
   font-size: 10rem;
   line-height: 1;
-  font-family: fsmb;
+  font-family: fb;
 }
 
 .sc-works .work-card .sw-link {
-  margin-top: 30px;
+  margin-top: 10px;
   display: block;
   max-width: max-content;
   padding-bottom: 10px;
@@ -389,7 +404,7 @@ header .cta-group .cta-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .sc-services .sc-services-content .img {
@@ -402,7 +417,7 @@ header .cta-group .cta-link {
 }
 
 .sc-services .sc-services-content .content {
-  max-width: 455px;
+  max-width: 445px;
   flex: 1;
 }
 .sc-services .sc-services-content .content .textbox:not(:last-child) {
@@ -414,8 +429,28 @@ header .cta-group .cta-link {
 .sc-services .sc-services-content .content .textbox .heading {
   margin-bottom: 13px;
 }
+.sc-agents {
+  padding: 75px 0 40px;
+  background-color: var(--gray-color);
+}
+.sc-agents .textbox {
+  max-width: 360px;
+  margin-bottom: 60px;
+}
+.sc-agents .textbox .heading {
+  margin-bottom: 20px;
+}
+.sc-agents .card-list .card-des .sub-title {
+  font-size: 15px;
+}
+.sc-agents .card-item .card-text {
+  padding: 13px 23px;
+}
+.sc-agents .card-item .card-text .card-des .icon-list {
+  gap: 36px;
+}
 .sc-super {
-  padding: 88px 100px;
+  padding: 88px 0 100px;
 }
 
 .super-item {
@@ -435,6 +470,19 @@ header .cta-group .cta-link {
 }
 .super-item .super-item-text .heading {
   margin-bottom: 20px;
+}
+.super-item .super-item-text .show-me {
+  height: 80px;
+  padding: 0 55px;
+  font-size: 1.8rem;
+  font-family: fsmb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  background-color: var(--dark-blue-color);
+  color: #fff;
+  margin-top: 50px;
 }
 .super-item .super-item-img .btn-main {
   padding: 0 55px;
@@ -464,4 +512,283 @@ header .cta-group .cta-link {
 
 .super-item:nth-child(even) {
   flex-direction: row-reverse;
+}
+.sc-contact {
+  display: flex;
+  padding-left: clamp(
+    15px,
+    calc((100vw - var(--container-width) - 15px) / 2),
+    999px
+  );
+  background-color: var(--gray-color);
+}
+.sc-contact .sc-contact-left {
+  width: calc(7 / 12 * (var(--container-width) + 30px));
+  padding: 90px 0 100px;
+}
+.sc-contact .sc-contact-right {
+  flex: 1;
+}
+.sc-contact .sc-contact-right img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+}
+.sc-contact .textbox .heading {
+  margin-bottom: 25px;
+}
+.sc-contact .textbox .desc {
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+.sc-contact .form-wrap {
+  padding-right: 15px;
+  max-width: 450px;
+}
+.sc-contact .form-wrap .form-group {
+  padding: 15px 0;
+  margin-bottom: 15px;
+  display: flex;
+}
+.sc-contact .form-wrap .form-group.border {
+  border-bottom: 1px solid var(--light-gray-color);
+}
+.sc-contact .form-wrap .form-group input,
+.sc-contact .form-wrap .form-group input:focus,
+.sc-contact .form-wrap .form-group textarea,
+.sc-contact .form-wrap .form-group select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: fre;
+  color: var(--dark-blue-color);
+  font-size: 13px;
+  line-height: 1;
+}
+.sc-contact .form-wrap .form-group select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  padding-right: 20px;
+  margin-right: 28px;
+  background-image: url("../img/ic-down.png");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+}
+.sc-contact .form-wrap .form-group textarea {
+  width: 100%;
+  resize: none;
+  height: 100px;
+  line-height: 3rem;
+  margin-top: -10px;
+}
+.sc-contact .form-wrap .form-group input {
+  width: 100%;
+}
+.sc-contact .form-wrap .form-group input::-webkit-input-placeholder,
+.sc-contact .form-wrap .form-group input::placeholder {
+  color: var(--light-gray-color);
+}
+.sc-contact .form-wrap .form-group-heading {
+  font-size: 1.5rem;
+  line-height: normal;
+  font-family: fsmb;
+  margin-top: 30px;
+}
+.sc-contact .form-wrap .form-group-heading + .form-group {
+  padding-bottom: 0;
+}
+.sc-contact .form-wrap .form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sc-contact .form-wrap .form-group.-vertical {
+  flex-direction: column;
+}
+.sc-contact .form-wrap .form-group.-vertical label:not(:first-child) {
+  margin-top: 20px;
+}
+.sc-contact .form-wrap .form-group:not(.-vertical) label:not(:first-child) {
+  margin-left: 75px;
+}
+.sc-contact .form-wrap .form-group label span {
+  color: var(--light-gray-color);
+  line-height: 1;
+}
+.sc-contact .form-wrap .form-group label input {
+  height: 0;
+  width: 0;
+  display: none;
+  position: relative;
+}
+.sc-contact .form-wrap .form-group label input[type="radio"] + .checkmark {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 13px;
+  height: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  background-color: transparent;
+  position: relative;
+}
+.sc-contact
+  .form-wrap
+  .form-group
+  label
+  input[type="radio"]
+  + .checkmark::after {
+  content: "";
+  border-radius: 50%;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  /* border: 1px solid currentColor; */
+  background-color: transparent;
+  position: absolute;
+  transition: 0.3s;
+}
+.sc-contact
+  .form-wrap
+  .form-group
+  label
+  input[type="radio"]:checked
+  + .checkmark::after {
+  background-color: var(--dark-blue-color);
+}
+
+.sc-contact .form-wrap .form-group label input[type="checkbox"] + .checkmark {
+  /* border-radius: 50%; */
+  overflow: hidden;
+  width: 13px;
+  height: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  background-color: transparent;
+  position: relative;
+  color: var(--light-gray-color);
+}
+.sc-contact
+  .form-wrap
+  .form-group
+  label
+  input[type="checkbox"]
+  + .checkmark::after {
+  content: "";
+  height: 13px;
+  width: 13px;
+  background-image: none;
+  background-size: 8px 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s;
+}
+.sc-contact
+  .form-wrap
+  .form-group
+  label
+  input[type="checkbox"]:checked
+  + .checkmark::after {
+  background-image: url(../img/checked.png);
+}
+.sc-contact .form-wrap .submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  background-color: var(--dark-blue-color);
+  color: #fff;
+  border: 0;
+  outline: 0;
+  font-family: fsmb;
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+.footer {
+  padding: 75px 0;
+  background-color: var(--dark-blue-color);
+}
+.footer-top .heading {
+  color: #fff;
+}
+.footer-top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-bottom: 65px;
+  border-bottom: 1px solid var(--light-gray-color);
+}
+.footer-top .contact-form {
+  display: flex;
+  flex: 1;
+  max-width: 450px;
+  height: 70px;
+  background: #fff;
+}
+.footer-top .contact-form .form-group {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.footer-top .contact-form .form-group input::placeholder,
+.footer-top .contact-form .form-group input::-webkit-input-placeholder {
+  color: var(--light-gray-color);
+}
+.footer-top .contact-form .form-group input {
+  width: 100%;
+  border: 0;
+  font-size: 1.5rem;
+  font-family: fre;
+  color: var(--dark-blue-color);
+  outline: 0;
+}
+.footer-top .contact-form .submit-btn {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.footer-bottom {
+  padding-top: 75px;
+  color: #fff;
+  display: flex;
+}
+
+.footer-bottom .col {
+  flex: 1;
+}
+.footer-bottom .col:first-child {
+  flex: 2;
+}
+.footer-bottom .col .logo {
+  margin-bottom: 68px;
+  display: block;
+  max-width: max-content;
+}
+.footer-bottom .site-map .site-map-title {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: var(--light-gray-color);
+  letter-spacing: 0;
+}
+
+.footer-bottom .site-map ul li {
+  margin-bottom: 5px;
 }
