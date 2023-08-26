@@ -52,7 +52,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: fsmb;
 }
 
@@ -159,7 +159,7 @@ header .cta-group .cta-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 25px;
+  padding: 0 20px;
   border-radius: 5px;
 }
 
@@ -235,12 +235,27 @@ header .cta-group .cta-link {
   border-top-right-radius: 5px;
   overflow: hidden;
 }
+.sc-hero .scroll-down {
+  writing-mode: vertical-lr;
+  color: #818181;
+  position: absolute;
+  bottom: 72px;
+  left: 0;
+  font-size: 1.2rem;
+}
+.sc-hero .scroll-down img {
+  display: inline-flex;
+  margin-top: 12px;
+}
 .sc-hero .cta-group {
   display: flex;
   position: absolute;
   bottom: 0;
   right: var(--gap);
 }
+/* .sc-hero .cta-group .btn-main {
+  font-size: 1.8rem;
+} */
 .sc-hero .cta-group .btn-main img {
   margin-right: 32px;
 }
@@ -264,7 +279,7 @@ header .cta-group .cta-link {
 }
 
 .sc-statistics .textbox .heading {
-  margin-bottom: 50px;
+  margin-bottom: 42px;
 }
 .sc-statistics .numbers {
   flex: 1;
@@ -428,6 +443,7 @@ header .cta-group .cta-link {
 }
 .sc-services .sc-services-content .content .textbox .heading {
   margin-bottom: 13px;
+  font-family: fsmb;
 }
 .sc-agents {
   padding: 75px 0 40px;
@@ -470,6 +486,7 @@ header .cta-group .cta-link {
 }
 .super-item .super-item-text .heading {
   margin-bottom: 20px;
+  font-family: fsmb;
 }
 .super-item .super-item-text .show-me {
   height: 80px;
@@ -575,6 +592,7 @@ header .cta-group .cta-link {
   margin-right: 28px;
   background-image: url("../img/ic-down.png");
   background-repeat: no-repeat;
+  color: var(--light-gray-color);
   background-position: right 0 center;
 }
 .sc-contact .form-wrap .form-group textarea {
@@ -588,7 +606,13 @@ header .cta-group .cta-link {
   width: 100%;
 }
 .sc-contact .form-wrap .form-group input::-webkit-input-placeholder,
-.sc-contact .form-wrap .form-group input::placeholder {
+.sc-contact .form-wrap .form-group input::placeholder,
+.sc-contact .form-wrap .form-group textarea:-moz-placeholder, /* Firefox 18- */
+.sc-contact .form-wrap .form-group textarea::-moz-placeholder, /* Firefox 19+ */
+.sc-contact .form-wrap .form-group textarea:-ms-input-placeholder, /* IE 10+ */
+.sc-contact .form-wrap .form-group textarea::-webkit-input-placeholder, /* Webkit based */
+.sc-contact .form-wrap .form-group textarea::placeholder,
+.sc-contact .form-wrap .form-group select {
   color: var(--light-gray-color);
 }
 .sc-contact .form-wrap .form-group-heading {
@@ -781,14 +805,20 @@ header .cta-group .cta-link {
   display: block;
   max-width: max-content;
 }
+.footer-bottom .col .copy-right {
+  font-size: 1.4rem;
+  letter-spacing: 0.025em;
+}
 .footer-bottom .site-map .site-map-title {
   font-size: 1.3rem;
   margin-bottom: 25px;
   text-transform: uppercase;
   color: var(--light-gray-color);
   letter-spacing: 0;
+  letter-spacing: 0;
 }
 
 .footer-bottom .site-map ul li {
+  letter-spacing: 0;
   margin-bottom: 5px;
 }
